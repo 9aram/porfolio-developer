@@ -85,13 +85,16 @@ $text: #74808a;
 */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', 'Nanum Gothic',sans-serif;
     font-size: 16px;
 
     &.active {
         overflow: hidden;
         z-index: -1;
     }
+}
+.kr-font{
+    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
 }
 
 // No JS styles
@@ -519,7 +522,8 @@ footer {
         color: $heading;
         display: inline-block;
         margin: 0;
-        font-family: 'Noto Sans KR';
+        font-family: 'Nanum Gothic', serif;
+
     }
 
     h4 {
@@ -533,6 +537,7 @@ footer {
         color: $text;
         font-size: 0.9em;
         margin: 0;
+        letter-spacing: 0.3px;
     }
 }
 
@@ -612,6 +617,7 @@ footer {
         clear: both;
         font-weight: 500;
         margin: 0 0 15px 0;
+        font-family: 'Nanum Gothic';
     }
 
     p, ul {
@@ -649,9 +655,13 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
+
+    img{
+        width: 300px;
+    }
 }
 
-.project-image {
+.project-image  {
     float: left;
 }
 
@@ -673,6 +683,7 @@ footer {
         color: $text;
         margin: 0 0 15px 0;
         font-size: 0.9em;
+        text-align: left;
     }
 }
 
@@ -722,7 +733,22 @@ footer {
         font-size: 1.2em;
     }
 }
-
+.skills_tag{
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: #6c757d;
+    margin-right: .25rem!important;
+}
 /*
     -------------------------------
     ----- 9. Certificate Styles -----
@@ -990,6 +1016,7 @@ footer {
     .education-block {
         h3, span {
             float: none;
+            font-family: 'Nanum Gothic', serif;
         }
     }
 

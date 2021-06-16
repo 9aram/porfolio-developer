@@ -530,15 +530,30 @@ footer {
         font-size: 1.0em;
         font-weight: 300;
         color: #7e8890;
-        margin: 1px 0px 15px 0px;
+        margin: 2px 0px 15px 0px;
     }
 
-    p {
+    a {
+        color: #374054;
+    }
+    ul.dashed {
+        list-style-type: none;
+        margin-left: -30px;
+    }
+    ul.dashed > li {
+        text-indent: -10px;
         color: $text;
         font-size: 0.9em;
-        margin: 0;
-        letter-spacing: 0.3px;
+        text-align: left;
+        letter-spacing: 0.4px;
+        line-height: 22px;
+
     }
+    ul.dashed > li:before {
+        content: "-";
+        padding-right: 5px;
+    }
+
 }
 
 .vtimeline-point {
@@ -599,6 +614,7 @@ footer {
     padding: 15px;
     border: 1px solid $border;
     text-align: left;
+    letter-spacing: 0.4px;
 
     h3 {
         font-weight: 500;
@@ -658,32 +674,68 @@ footer {
 
     img{
         width: 300px;
+        height: 100%;
     }
 }
 
 .project-image  {
     float: left;
-}
-
-.project-info {
     position: absolute;
+    top: 0;
+    height: 100%;
+    text-align: left;
+}
+.margin10{
+    margin-left: 10px;
+}
+.margin-25{
+    margin-top: -25px;
+}
+.project-info {
+    /*position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%);*/
     margin-left: 300px;
-    padding: 15px;
+    padding: 35px 15px 20px 15px;
 
     h3 {
         font-size: 1.5em;
         font-weight: 300;
         color: $heading;
-        margin: 0 0 15px 0;
+        margin: 0;
+    }
+    h4{
+        margin: 0 0 20px 0;
+        font-size: 1.0em;
+        font-weight: 400;
+        color: #374054;
+    }
+    ul.dashed {
+        list-style-type: none;
+        margin-left: -30px;
+        margin-top: -10px;
+        margin-bottom: 15px;
+    }
+    ul.dashed > li {
+        color: $text;
+        font-size: 0.9em;
+        text-align: left;
+        letter-spacing: 0.4px;
+        line-height: 22px;
+        text-indent: -10px;
     }
 
+    ul.dashed > li:before {
+        content: "-";
+        padding-right: 5px;
+    }
     p {
         color: $text;
         margin: 0 0 15px 0;
         font-size: 0.9em;
         text-align: left;
+        letter-spacing: 0.4px;
+        line-height: 22px;
     }
 }
 
@@ -709,6 +761,7 @@ footer {
 #skills {
     padding: 50px 15px;
     text-align: center;
+    border-bottom: 1px solid #dcd9d9;
 
     h2 {
         color: $heading;
@@ -716,7 +769,7 @@ footer {
     }
 
     ul {
-        display: block;
+        display: inline;
         margin: 0 auto;
         padding: 0;
         max-width: 800px;
@@ -730,7 +783,10 @@ footer {
         background: darken($background-alt, 5%);
         list-style: none;
         cursor: default;
-        font-size: 1.2em;
+        font-size: 1.0em;
+    }
+    span{
+        font-size: 20px;
     }
 }
 .skills_tag{
@@ -748,6 +804,30 @@ footer {
     color: #fff;
     background-color: #6c757d;
     margin-right: .25rem!important;
+}
+
+#table {
+    display: table;
+    width: 100%;
+
+    .row {
+        display: table-row;
+    }
+
+    .cell {
+        display: table-cell;
+        padding: 3px;
+        border-bottom: 1px solid #DDD;
+    }
+
+    .col1 {
+        width: 23%;
+    }
+
+    .col2 {
+        width: 40%;
+        text-align: left;
+    }
 }
 /*
     -------------------------------
@@ -1058,6 +1138,16 @@ footer {
             font-size: 0.9em;
             padding: 5px 10px;
         }
+    }
+    #table {
+        .col1 { width: 30%; }
+        .col2 {width: 70%; }
+    }
+    #skills span {
+        font-size: 15px;
+    }
+    #certificates li {
+        font-size: 1.0em;
     }
 
 }
